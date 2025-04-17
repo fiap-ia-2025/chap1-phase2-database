@@ -15,30 +15,28 @@ Este banco de dados armazena e analisa dados coletados por sensores em plantaç�
 - **Nome** (ex: "Fazenda Girassol")
 - **Área total** (em hectares)
 
+### CULTURA
+- **Nome** (ex: "Soja", "Milho")
+
 ### PLANTACAO
-- **Tipo de cultura** (ex: "Soja", "Milho")
 - **Área plantada** (em hectares)
 - **Data de plantio**
 
 ### SENSOR
-- **Tipo** (`Umidade`, `pH` ou `NPK`)
 - **Localização** (ex: "Setor A")
 
 ### REFERENCIA_NUTRIENTE
-- **Cultura** (ex: "Soja", "Milho")
 - **Nutriente** (ex: "Nitrogênio", "Fósforo", "Potássio")
 - **Faixa ideal mínima** (em mg/kg de solo)
 - **Faixa ideal máxima** (em mg/kg de solo)
 - **Ação recomendada**  (ex: "Adubação nitrogenada se <20")
 
 ### REFERENCIA_PH
-- **Cultura** (ex: "Soja", "Milho")
 - **Ph mínimo ideal** 
 - **Ph máximo ideal** 
 - **Ação recomendada**  (ex: "Aplicar calcário se pH < 5.5")
 
 ### REFERENCIA_UMIDADE
-- **Cultura** (ex: "Soja", "Milho")
 - **Umidade mínima ideal** (em % da Capacidade de Campo)
 - **Umidade máxima ideal** (em % da Capacidade de Campo)
 - **Ação recomendada**  (ex: "Suspender irrigação se umidade > 70%")
@@ -64,12 +62,14 @@ Este banco de dados armazena e analisa dados coletados por sensores em plantaç�
 |------------------|--------------------|----------------------|---------------|--------------------------------------------------------------------------------------------------------------|
 | FAZENDA          | possui             | PLANTACAO            | 1:N           | Uma fazenda pode ter várias plantações                                                                       |
 | PLANTACAO        | monitorada por     | SENSOR               | 1:N           | Cada plantação é monitorada por múltiplos sensores                                                           |
+| PLANTACAO                   | refere-se a        | CULTURA              | N:1           | Cada plantação tem uma cultura associada.                             |
 | SENSOR           | realiza            | COLETA               | 1:N           | Um sensor faz várias coletas ao longo do tempo                                                               |
-| COLETA           | baseia             | RECOMENDACAO         | 1:N           | Uma coleta pode originar múltiplas recomendações                                                             |
-| RECOMENDACAO     | aplica-se a        | PLANTACAO            | 1:N           | Uma plantação pode ter várias recomendações, mas cada recomendação só se refere a uma única plantação.       |                                                     |
-| COLETA           | usa referência de  | REFERENCIA_NUTRIENTE | N:1           | Coletas de nutrientes (NPK) devem obrigatoriamente usar uma referência nutricional correspondente à cultura. |
-| COLETA           | usa referência de  | REFERENCIA_PH        | N:1           | Coletas de pH podem usar uma referência, se associada à cultura.                                             |
-| COLETA           | usa referência de  | REFERENCIA_UMIDADE   | N:1           | Coletas de umidade podem usar uma referência, se associada à cultura.                                        |
+| COLETA           | gera             | RECOMENDACAO         | 1:N           | Uma coleta pode originar múltiplas recomendações                                                             |
+| COLETA           | 	baseia-se em  | REFERENCIA_NUTRIENTE | N:1           | Opcional, apenas se for coleta de NPK. |
+| COLETA           | 	baseia-se em  | REFERENCIA_PH        | N:1           | Opcional, apenas se for coleta de pH.                                            |
+| COLETA           | 	baseia-se em  | REFERENCIA_UMIDADE   | N:1           | Opcional, apenas se for coleta de umidade.                                       |
+| RECOMENDACAO     | aplica-se a        | PLANTACAO            | 1:N           | Uma plantação pode ter várias recomendações, mas cada recomendação só se refere a uma única plantação.       |  
+
 ---
 
 # 📜 Regras de Negócio
