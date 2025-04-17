@@ -53,7 +53,7 @@ Este banco de dados armazena e analisa dados coletados por sensores em plantaç�
 
 ### RECOMENDACAO
 - **Tipo** (`Irrigação`, `Fertilizante`, `Ajuste de pH`)
-- **Descrição** (ex: "Aumentar irrigação em 20%")
+- **Descrição** (ex: "Iniciar irrigação no Setor A da plantação de soja, devido à umidade atual de 28%.")
 - **Status** (`Pendente`, `Aplicada`, `Cancelada`)
 - **Data de criação**
 
