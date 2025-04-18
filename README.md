@@ -62,13 +62,16 @@ Este banco de dados armazena e analisa dados coletados por sensores em plantaç�
 |------------------|--------------------|----------------------|---------------|--------------------------------------------------------------------------------------------------------------|
 | FAZENDA          | possui             | PLANTACAO            | 1:N           | Uma fazenda pode ter várias plantações                                                                       |
 | PLANTACAO        | monitorada por     | SENSOR               | 1:N           | Cada plantação é monitorada por múltiplos sensores                                                           |
-| PLANTACAO                   | refere-se a        | CULTURA              | N:1           | Cada plantação tem uma cultura associada.                             |
+| PLANTACAO                   | refere-se a        | CULTURA              | N:1           | Cada plantação tem uma única cultura associada, mas uma cultura pode estar presente em várias plantações.|
 | SENSOR           | realiza            | COLETA               | 1:N           | Um sensor faz várias coletas ao longo do tempo                                                               |
 | COLETA           | gera             | RECOMENDACAO         | 1:N           | Uma coleta pode originar múltiplas recomendações                                                             |
 | COLETA           | 	baseia-se em  | REFERENCIA_NUTRIENTE | N:1           | Opcional, apenas se for coleta de NPK. |
 | COLETA           | 	baseia-se em  | REFERENCIA_PH        | N:1           | Opcional, apenas se for coleta de pH.                                            |
 | COLETA           | 	baseia-se em  | REFERENCIA_UMIDADE   | N:1           | Opcional, apenas se for coleta de umidade.                                       |
-| RECOMENDACAO     | aplica-se a        | PLANTACAO            | 1:N           | Uma plantação pode ter várias recomendações, mas cada recomendação só se refere a uma única plantação.       |  
+| RECOMENDACAO     | aplica-se a        | PLANTACAO            | 1:N           | Uma plantação pode ter várias recomendações, mas cada recomendação só se refere a uma única plantação.       | 
+| REFERENCIA_NUTRIENTE        | é definida para       | CULTURA              | N:1           | Cada referência nutricional é para uma cultura específica. |
+| REFERENCIA_PH       | é definida para       | CULTURA              | N:1           | Cada referência de pH é para uma cultura específica.|
+| REFERENCIA_UMIDADE      | é definida para       | CULTURA              | N:1           | Cada referência de umidade é para uma cultura específica.|
 
 ---
 
@@ -125,6 +128,8 @@ As faixas ideais também variam por cultura.
 - A ação recomendada será gerada somente quando houver referência definida para a cultura da plantação associada.
 - Uma **RECOMENDAÇÃO** será criada sempre que uma **COLETA** estiver fora da faixa ideal definida para a cultura.
 - Se a mesma anomalia for detectada em duas coletas consecutivas, a prioridade da recomendação será aumentada.
+- Um único sensor pode realizar medições de diferentes tipos: Cada sensor pode coletar dados de múltiplos parâmetros (umidade, pH, Nitrogênio, Fósforo, Potássio, etc.), sem a necessidade de sensores especializados para cada tipo de medição.
+  - A distinção entre os tipos de medições será feita através do campo Tipo de Medição na tabela COLETA.
 
 
 ## 🕰️ Histórico
