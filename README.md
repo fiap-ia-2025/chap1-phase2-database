@@ -1,5 +1,8 @@
-# farm-sense-db
-Fase 2 (Cap 1 - Um mapa do tesouro)
+# FIAP - Inteligência Artificial
+Capítulo 1 - Play na sua carreira em IA
+
+## FarmTech Solutions - Database
+
 
 ## 📌 Objetivo
 O objetivo deste projeto é desenvolver um sistema de armazenamento e análise dos dados coletados por sensores utilizados na agricultura de precisão. O sistema deve ser capaz de armazenar e processar informações em tempo real, geradas por sensores de umidade, pH e nutrientes (nitrogênio, fósforo e potássio), aplicados em plantações agrícolas para otimizar a irrigação e a aplicação de nutrientes.
