@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="PROJETO FARM_TECH_DB" id="7385C90B-64AF-FB01-367D-70EEC3A72DC4" version="3.5">
+<createdBy>mpssilva</createdBy>
+<createdTime>2025-04-17 16:08:37 UTC</createdTime>
+<ownerDesignName>MODELO DADOS FARM_SENSE</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>7385C90B-64AF-FB01-367D-70EEC3A72DC4</designId>
+</OSDM_Design>
