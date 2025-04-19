@@ -1,5 +1,5 @@
 # FIAP - Inteligência Artificial
-Capítulo 1 - Play na sua carreira em IA
+Fase 2 (Cap 1 - Um Mapa do Tesouro)
 
 ## FarmTech Solutions - Database
 
