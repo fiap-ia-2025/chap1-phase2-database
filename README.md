@@ -244,9 +244,15 @@ As faixas ideais também variam por cultura.
 
 ---
 
-## 🛠️ Implementação Técnica (DER) - em construção
-- **Diagrama Visual**: Disponível em [`diagrama.png`](diagrama.png).
-- **Arquivo de Modelagem**: [`modelo.dmd`](modelo.dmd) (SQL Developer Data Modeler).
+## 📄 Conteúdo da entrega
+
+📦 **PROJETO FARM_TECH_DB.rar**  
+Arquivo compactado contendo:
+
+- `PROJETO_FARM_TECH_DB.dmd`: arquivo de modelagem relacional criado com o Oracle SQL Developer Data Modeler.  
+- `modelagem_farm_tech.png`: imagem representando visualmente o modelo relacional (tabelas, chaves e relacionamentos).
+
+📝 Este README.md contém a documentação explicativa do Modelo Entidade-Relacionamento (MER) do sistema.
 
 ---
 
