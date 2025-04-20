@@ -76,7 +76,7 @@ A partir desses dados, o sistema irá:
 - **Data e Hora**
 
 ### APLICACAO
-- **Tipo de Recomendação** (`Irrigação`, `Fertilizante_N`, `Fertilizante_P`,`Fertilizante_K`,`Ajuste de pH`)
+- **Tipo** (`Irrigação`, `Fertilizante_N`, `Fertilizante_P`,`Fertilizante_K`,`Ajuste de pH`)
 - **Quantidade** (Quantidade aplicada)
 - **Unidade** (Unidade de medida da aplicação)
 - **Data e Hora INÍCIO**
@@ -84,7 +84,7 @@ A partir desses dados, o sistema irá:
 - **Eficácia** (`Baixa`, `Média`, `Alta`)
 
 ### PREVISAO
-- **Tipo de Recomendação** (`Umidade`, `PH`, `Nitrogênio`,`Fósforo`,`Potássio`)
+- **Tipo** (`Umidade`, `PH`, `Nitrogênio`,`Fósforo`,`Potássio`)
 - **Valor previsto** (Quantidade aplicada)
 - **Data da previsão** (Data e hora da previsão)
 - **Data prevista** (Data em que o valor previsto se aplica)
