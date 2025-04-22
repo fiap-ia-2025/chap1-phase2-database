@@ -198,17 +198,17 @@ O sistema deve utilizar análise preditiva para otimização de recursos.
 ## 5. Exemplo de Implementação de Regras de Aplicação:
 
 ### 🌱 Umidade do Solo
-A umidade ideal varia por cultura. Ações são recomendadas conforme a cultura associada à plantação.
+A umidade ideal pode variar por cultura. Ações são recomendadas conforme a cultura associada à plantação.
 
 | Cultura | Umidade Ideal (% da Capacidade de Campo) | Ação Recomendável |
 |---------|------------------------------------------|-------------------|
-| Soja    | 45% - 65%                                | ⚠️ Aumentar irrigação se < 30%  |
-| Milho   | 50% - 70%                                | ⚠️ Aumentar irrigação se < 30% |
+| Soja    | 45% - 65%                                | ⚠️ Aumentar irrigação se < 40%  |
+| Milho   | 50% - 70%                                | ⚠️ Aumentar irrigação se < 45% |
 
 ---
 
 ### 🧪 pH do Solo
-O ph ideal varia por cultura. Ações são recomendadas conforme a cultura associada à plantação.
+O ph ideal pode variar por cultura. Ações são recomendadas conforme a cultura associada à plantação.
 
 | Cultura | Faixa Ideal de pH | Ação Recomendável |
 |---------|-------------------|-------------------|
@@ -219,7 +219,7 @@ O ph ideal varia por cultura. Ações são recomendadas conforme a cultura assoc
 ---
 
 ### 🌿 Nutrientes (NPK)
-As faixas ideais também variam por cultura.
+As faixas ideais também podem variar por cultura.
 
 ### Nitrogênio (N)
 | Cultura | Faixa Ideal (mg/kg) | Ação Recomendável |
@@ -264,7 +264,7 @@ Este projeto utiliza parâmetros técnicos validados pelas seguintes fontes:
 
    - ALBUQUERQUE, P. E. P. de; FARIA, C. M. de; COELHO, E. A. **Utilização do software IrrigaFácil para manejo de irrigação**. Embrapa Instrumentação, 2011. Disponível em: <https://www.embrapa.br/busca-de-publicacoes/-/publicacao/919820/utilizacao-do-software-irrigafacil-para-manejo-de-irrigacao>.
      
-   - BASTOS, E. A.; ANDRADE JUNIOR, A. S. de; SOUSA, V. F. de. **Manejo de irrigação**. Embrapa Meio-Norte, 2005. Disponível em: <https://www.embrapa.br/meio-norte/busca-de-publicacoes/-/publicacao/1095212/manejo-de-irrigacao>.
+   - BASTOS, E. A.; ANDRADE JUNIOR, A. S. de; SOUSA, V. F. de. **Manejo de irrigação**. Embrapa Meio-Norte, 2005. Disponível em: <[https://www.embrapa.br/meio-norte/busca-de-publicacoes/-/publicacao/1095212/manejo-de-irrigacao](https://www.infoteca.cnptia.embrapa.br/handle/doc/68882)>.
      
    - FAO. **Crop evapotranspiration - Guidelines for computing crop water requirements (FAO 56)**. Rome: Food and Agriculture Organization of the United Nations, 1998. Disponível em: <http://www.fao.org/3/x0490e/x0490e00.htm>.
      
